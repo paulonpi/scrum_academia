@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Data:</strong>
+  <%= @ficha_musc.data %>
+</p>
+
+<p>
+  <strong>Validade:</strong>
+  <%= @ficha_musc.validade %>
+</p>
+
+<p>
+  <strong>Obs:</strong>
+  <%= @ficha_musc.obs %>
+</p>
+
+<%= link_to 'Edit', edit_ficha_musc_path(@ficha_musc) %> |
+<%= link_to 'Back', ficha_muscs_path %>

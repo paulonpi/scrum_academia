@@ -1,0 +1,1 @@
+json.array! @ficha_muscs, partial: 'ficha_muscs/ficha_musc', as: :ficha_musc

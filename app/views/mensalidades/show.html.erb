@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Pago:</strong>
+  <%= @mensalidade.pago %>
+</p>
+
+<p>
+  <strong>Data venc:</strong>
+  <%= @mensalidade.data_venc %>
+</p>
+
+<%= link_to 'Edit', edit_mensalidade_path(@mensalidade) %> |
+<%= link_to 'Back', mensalidades_path %>

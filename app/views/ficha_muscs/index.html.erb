@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Ficha Muscs</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Data</th>
+      <th>Validade</th>
+      <th>Obs</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @ficha_muscs.each do |ficha_musc| %>
+      <tr>
+        <td><%= ficha_musc.data %></td>
+        <td><%= ficha_musc.validade %></td>
+        <td><%= ficha_musc.obs %></td>
+        <td><%= link_to 'Show', ficha_musc %></td>
+        <td><%= link_to 'Edit', edit_ficha_musc_path(ficha_musc) %></td>
+        <td><%= link_to 'Destroy', ficha_musc, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Ficha musc', new_ficha_musc_path %>

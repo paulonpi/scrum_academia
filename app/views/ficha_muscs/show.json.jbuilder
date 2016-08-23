@@ -1,0 +1,1 @@
+json.partial! "ficha_muscs/ficha_musc", ficha_musc: @ficha_musc

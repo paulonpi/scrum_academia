@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Grupo musc:</strong>
+  <%= @exercicio.grupo_musc %>
+</p>
+
+<p>
+  <strong>Dia:</strong>
+  <%= @exercicio.dia %>
+</p>
+
+<p>
+  <strong>Serie:</strong>
+  <%= @exercicio.serie %>
+</p>
+
+<p>
+  <strong>Repeticoes:</strong>
+  <%= @exercicio.repeticoes %>
+</p>
+
+<p>
+  <strong>Kg:</strong>
+  <%= @exercicio.kg %>
+</p>
+
+<p>
+  <strong>Nome:</strong>
+  <%= @exercicio.nome %>
+</p>
+
+<%= link_to 'Edit', edit_exercicio_path(@exercicio) %> |
+<%= link_to 'Back', exercicios_path %>

@@ -1,0 +1,1 @@
+json.partial! "ficha_aval_fisicas/ficha_aval_fisica", ficha_aval_fisica: @ficha_aval_fisica

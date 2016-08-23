@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  grupo_musc: MyString
+  dia: MyString
+  serie: MyString
+  repeticoes: 
+  kg: 9.99
+  nome: MyString
+
+two:
+  grupo_musc: MyString
+  dia: MyString
+  serie: MyString
+  repeticoes: 
+  kg: 9.99
+  nome: MyString

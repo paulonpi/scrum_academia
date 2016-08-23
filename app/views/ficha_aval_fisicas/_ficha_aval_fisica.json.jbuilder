@@ -1,0 +1,2 @@
+json.extract! ficha_aval_fisica, :id, :antebraco_direito, :antebraco_esquerdo, :panturilha_direita, :panturilha_esquerda, :pescoco, :torax, :coxa_direita, :coxa_esquerda, :peso, :quadril, :braco_esquerdo, :braco_direito, :ombro, :abdome, :cintura, :altura, :obs, :created_at, :updated_at
+json.url ficha_aval_fisica_url(ficha_aval_fisica, format: :json)

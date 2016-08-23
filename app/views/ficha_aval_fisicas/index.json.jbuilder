@@ -1,0 +1,1 @@
+json.array! @ficha_aval_fisicas, partial: 'ficha_aval_fisicas/ficha_aval_fisica', as: :ficha_aval_fisica

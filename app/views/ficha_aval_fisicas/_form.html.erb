@@ -1,0 +1,85 @@
+<%= form_for(@ficha_aval_fisica) do |f| %>
+  <% if @ficha_aval_fisica.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@ficha_aval_fisica.errors.count, "error") %> prohibited this ficha_aval_fisica from being saved:</h2>
+
+      <ul>
+      <% @ficha_aval_fisica.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :antebraco_direito %><br>
+    <%= f.text_field :antebraco_direito %>
+  </div>
+  <div class="field">
+    <%= f.label :antebraco_esquerdo %><br>
+    <%= f.text_field :antebraco_esquerdo %>
+  </div>
+  <div class="field">
+    <%= f.label :panturilha_direita %><br>
+    <%= f.text_field :panturilha_direita %>
+  </div>
+  <div class="field">
+    <%= f.label :panturilha_esquerda %><br>
+    <%= f.text_field :panturilha_esquerda %>
+  </div>
+  <div class="field">
+    <%= f.label :pescoco %><br>
+    <%= f.text_field :pescoco %>
+  </div>
+  <div class="field">
+    <%= f.label :torax %><br>
+    <%= f.text_field :torax %>
+  </div>
+  <div class="field">
+    <%= f.label :coxa_direita %><br>
+    <%= f.text_field :coxa_direita %>
+  </div>
+  <div class="field">
+    <%= f.label :coxa_esquerda %><br>
+    <%= f.text_field :coxa_esquerda %>
+  </div>
+  <div class="field">
+    <%= f.label :peso %><br>
+    <%= f.text_field :peso %>
+  </div>
+  <div class="field">
+    <%= f.label :quadril %><br>
+    <%= f.text_field :quadril %>
+  </div>
+  <div class="field">
+    <%= f.label :braco_esquerdo %><br>
+    <%= f.text_field :braco_esquerdo %>
+  </div>
+  <div class="field">
+    <%= f.label :braco_direito %><br>
+    <%= f.text_field :braco_direito %>
+  </div>
+  <div class="field">
+    <%= f.label :ombro %><br>
+    <%= f.text_field :ombro %>
+  </div>
+  <div class="field">
+    <%= f.label :abdome %><br>
+    <%= f.text_field :abdome %>
+  </div>
+  <div class="field">
+    <%= f.label :cintura %><br>
+    <%= f.text_field :cintura %>
+  </div>
+  <div class="field">
+    <%= f.label :altura %><br>
+    <%= f.text_field :altura %>
+  </div>
+  <div class="field">
+    <%= f.label :obs %><br>
+    <%= f.text_area :obs %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
