@@ -1,0 +1,6 @@
+class Usuario < ActiveRecord::Base
+	has_one :cidade
+	belongs_to :ficha_musc
+	belongs_to :mensalidade
+	belongs_to :ficha_aval_fisica
+end

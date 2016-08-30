@@ -69,6 +69,6 @@ class FichaAvalFisicasController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def ficha_aval_fisica_params
-      params.require(:ficha_aval_fisica).permit(:antebraco_direito, :antebraco_esquerdo, :panturilha_direita, :panturilha_esquerda, :pescoco, :torax, :coxa_direita, :coxa_esquerda, :peso, :quadril, :braco_esquerdo, :braco_direito, :ombro, :abdome, :cintura, :altura, :obs, :usuario_id)
+      params.require(:ficha_aval_fisica).permit(:antebraco_direito, :antebraco_esquerdo, :panturilha_direita, :panturilha_esquerda, :pescoco, :torax, :coxa_direita, :coxa_esquerda, :peso, :quadril, :braco_esquerdo, :braco_direito, :ombro, :abdome, :cintura, :altura, :obs)
     end
 end
