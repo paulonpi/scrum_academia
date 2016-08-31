@@ -25,7 +25,6 @@ class MensalidadesController < ApplicationController
   # POST /mensalidades.json
   def create
     @mensalidade = Mensalidade.new(mensalidade_params)
-
     respond_to do |format|
       if @mensalidade.save
         format.html { redirect_to @mensalidade, notice: 'Mensalidade was successfully created.' }
@@ -66,6 +65,10 @@ class MensalidadesController < ApplicationController
     def set_mensalidade
       @mensalidade = Mensalidade.find(params[:id])
     end
+  #par criar mensalidade atravez do usuario
+  def criar_mensalidade
+	params.require(:usuario_id).permit(:usuario_id)
+  end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def mensalidade_params

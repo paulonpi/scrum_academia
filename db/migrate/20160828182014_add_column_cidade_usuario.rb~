@@ -1,0 +1,4 @@
+class AddColumnCidadeUsuario < ActiveRecord::Migration
+  def change
+  end
+end

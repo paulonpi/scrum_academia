@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160823233228) do
+ActiveRecord::Schema.define(version: 20160829232713) do
 
   create_table "cidades", force: :cascade do |t|
     t.string   "nome"
@@ -51,14 +51,17 @@ ActiveRecord::Schema.define(version: 20160823233228) do
     t.text     "obs"
     t.datetime "created_at",          null: false
     t.datetime "updated_at",          null: false
+    t.integer  "usuario_id"
   end
 
   create_table "ficha_muscs", force: :cascade do |t|
     t.string   "data"
     t.string   "validade"
     t.string   "obs"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+    t.integer  "usuario_id"
+    t.integer  "exercicio_id"
   end
 
   create_table "mensalidades", force: :cascade do |t|
@@ -66,6 +69,7 @@ ActiveRecord::Schema.define(version: 20160823233228) do
     t.string   "data_venc"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer  "usuario_id"
   end
 
   create_table "usuarios", force: :cascade do |t|
@@ -78,6 +82,7 @@ ActiveRecord::Schema.define(version: 20160823233228) do
     t.string   "tipo_usuario"
     t.datetime "created_at",           null: false
     t.datetime "updated_at",           null: false
+    t.integer  "cidade_id"
   end
 
 end
