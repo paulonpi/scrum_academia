@@ -1,0 +1,54 @@
+
+<h2> Ficha Avaliacao </h2> 
+
+  <table>
+  <thead>
+    <tr>
+      <th>Antebraco direito</th>
+      <th>Antebraco esquerdo</th>
+      <th>Panturilha direita</th>
+      <th>Panturilha esquerda</th>
+      <th>Pescoco</th>
+      <th>Torax</th>
+      <th>Coxa direita</th>
+      <th>Coxa esquerda</th>
+      <th>Peso</th>
+      <th>Quadril</th>
+      <th>Braco esquerdo</th>
+      <th>Braco direito</th>
+      <th>Ombro</th>
+      <th>Abdome</th>
+      <th>Cintura</th>
+      <th>Altura</th>
+      <th>Obs</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @usuario.ficha_aval_fisica do |ficha_aval_fisica| %>
+      <tr>
+        <td><%= ficha_aval_fisica.antebraco_direito %></td>
+        <td><%= ficha_aval_fisica.antebraco_esquerdo %></td>
+        <td><%= ficha_aval_fisica.panturilha_direita %></td>
+        <td><%= ficha_aval_fisica.panturilha_esquerda %></td>
+        <td><%= ficha_aval_fisica.pescoco %></td>
+        <td><%= ficha_aval_fisica.torax %></td>
+        <td><%= ficha_aval_fisica.coxa_direita %></td>
+        <td><%= ficha_aval_fisica.coxa_esquerda %></td>
+        <td><%= ficha_aval_fisica.peso %></td>
+        <td><%= ficha_aval_fisica.quadril %></td>
+        <td><%= ficha_aval_fisica.braco_esquerdo %></td>
+        <td><%= ficha_aval_fisica.braco_direito %></td>
+        <td><%= ficha_aval_fisica.ombro %></td>
+        <td><%= ficha_aval_fisica.abdome %></td>
+        <td><%= ficha_aval_fisica.cintura %></td>
+        <td><%= ficha_aval_fisica.altura %></td>
+        <td><%= ficha_aval_fisica.obs %></td>
+        <td><%= link_to 'Show', ficha_aval_fisica %></td>
+        <td><%= link_to 'Edit', edit_ficha_aval_fisica_path(ficha_aval_fisica) %></td>
+        <td><%= link_to 'Destroy', ficha_aval_fisica, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

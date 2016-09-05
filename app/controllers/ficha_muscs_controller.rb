@@ -21,6 +21,7 @@ class FichaMuscsController < ApplicationController
   def edit
   end
 
+
   # POST /ficha_muscs
   # POST /ficha_muscs.json
   def create
