@@ -25,11 +25,11 @@ class UsuariosController < ApplicationController
   # POST /usuarios.json
   def create
     @usuario = Usuario.new(usuario_params)
-    
+
     respond_to do |format|
       if @usuario.save
-	
-        format.html { redirect_to @usuario, notice: 'Usuario was successfully created.' }
+
+        format.html { redirect_to @usuario, notice: 'Usuario foi criado.' }
         format.json { render :show, status: :created, location: @usuario }
 	Mensalidade.create({usuario_id: @usuario.id})
       else
