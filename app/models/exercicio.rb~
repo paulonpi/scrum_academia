@@ -1,3 +1,5 @@
 class Exercicio < ActiveRecord::Base
-	has_many :exercicio
+	has_many :ficha_exers, dependent: :destroy
+	has_many :ficha_exered_exercicios, through: :ficha_exers, source: :exercicio
+
 end

@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  resources :exercicios_ficha_muscs
+  get 'exercicio_ficha_musc/new'
+
+  get 'exercicio_ficha_musc/create'
+
+  resources :ficha_exers
   resources :exercicios
   resources :ficha_muscs
   resources :ficha_aval_fisicas

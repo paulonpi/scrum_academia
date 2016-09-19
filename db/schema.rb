@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160829232713) do
+ActiveRecord::Schema.define(version: 20160917215842) do
 
   create_table "cidades", force: :cascade do |t|
     t.string   "nome"
@@ -29,6 +29,13 @@ ActiveRecord::Schema.define(version: 20160829232713) do
     t.string   "nome"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "exercicios_ficha_muscs", force: :cascade do |t|
+    t.integer  "ficha_musc_id"
+    t.integer  "exercicio_id"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
   end
 
   create_table "ficha_aval_fisicas", force: :cascade do |t|
@@ -53,6 +60,16 @@ ActiveRecord::Schema.define(version: 20160829232713) do
     t.datetime "updated_at",          null: false
     t.integer  "usuario_id"
   end
+
+  create_table "ficha_exers", force: :cascade do |t|
+    t.integer  "ficha_musc_id"
+    t.integer  "exercicio_id"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+  end
+
+  add_index "ficha_exers", ["exercicio_id"], name: "index_ficha_exers_on_exercicio_id"
+  add_index "ficha_exers", ["ficha_musc_id"], name: "index_ficha_exers_on_ficha_musc_id"
 
   create_table "ficha_muscs", force: :cascade do |t|
     t.string   "data"

@@ -42,6 +42,7 @@ class FichaMuscsController < ApplicationController
   # PATCH/PUT /ficha_muscs/1.json
   def update
     respond_to do |format|
+	FichaExer.create({ficha_musc_id: @ficha_musc.id})
       if @ficha_musc.update(ficha_musc_params)
         format.html { redirect_to @ficha_musc, notice: 'Ficha musc was successfully updated.' }
         format.json { render :show, status: :ok, location: @ficha_musc }
@@ -70,6 +71,6 @@ class FichaMuscsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def ficha_musc_params
-      params.require(:ficha_musc).permit(:data, :validade, :obs, :usuario_id, :exercicio_id)
+      params.require(:ficha_musc).permit(:data, :validade, :obs, :usuario_id)
     end
 end
