@@ -44,7 +44,6 @@
                             </li>
                         </ul>
 
-                        <!-- Right(Notification and Searchbox -->
                         
                     </div><!-- end container -->
                 </div><!-- end navbar -->
@@ -64,42 +63,26 @@
                         <ul>
                           <li class="text-muted menu-title">Menu</li>
 
-<<<<<<< HEAD
                             <li>
-                                <a href="index-2.html" class="waves-effect active"><i class="zmdi zmdi-view-dashboard"></i> <span> Alunos </span> </a>
+                                <a href="/home" class="waves-effect active"><i class="zmdi zmdi-view-dashboard"></i> <span> Dashboard </span> </a>
                             </li>
-
                             <li>
-                                <a href="typography.html" class="waves-effect"><i class="zmdi zmdi-format-underlined"></i> <span> Exercicios </span> </a>
+                                <a href="/usuarios" class="waves-effect "><i class="zmdi zmdi-view-dashboard"></i> <span> Usuarios </span> </a>
                             </li>
-
-                           
-
-                            <li class="has_sub">
-                                <a href="javascript:void(0);" class="waves-effect"><i class="zmdi zmdi-collection-text"></i><span class="label label-warning pull-right">7</span><span> Mensalidades </span> </a>
-                                <ul class="list-unstyled">
-                                    <li><a href="form-elements.html">General Elements</a></li>
-                                    <li><a href="form-advanced.html">Advanced Form</a></li>
-                                    <li><a href="form-validation.html">Form Validation</a></li>
-                                    <li><a href="form-wizard.html">Form Wizard</a></li>
-                                    <li><a href="form-fileupload.html">Form Uploads</a></li>
-                                    <li><a href="form-wysiwig.html">Wysiwig Editors</a></li>
-                                    <li><a href="form-xeditable.html">X-editable</a></li>
-                                </ul>
+                            <li>
+                                <a href="/exercicios" class="waves-effect "><i class="zmdi zmdi-view-dashboard"></i> <span> Exercicios </span> </a>
+                            </li>
+                            <li>
+                                <a href="/mensalidades" class="waves-effect "><i class="zmdi zmdi-view-dashboard"></i> <span> Mensalidades </span> </a>
+                            </li>
+                            <li>
+                                <a href="/exercicios_ficha_muscs" class="waves-effect "><i class="zmdi zmdi-view-dashboard"></i> <span> Ficha Musculação </span> </a>
+                            </li>
+                            <li>
+                                <a href="/exercicios" class="waves-effect "><i class="zmdi zmdi-view-dashboard"></i> <span>Exercicios</span> </a>
                             </li>
 
                             
-
-                            <li>
-                                <a href="calendar.html" class="waves-effect"><i class="zmdi zmdi-calendar"></i><span> Fichas </span></a>
-                            </li>
-
-                           
-
-                           
-
-                            
-
                         </ul>
                         <div class="clearfix"></div>
                     </div>
@@ -109,25 +92,6 @@
                 </div>
 
             </div>
-=======
-    <div class="navbar navbar-default navbar-static-top">
-      <div class="container">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" href="../home">Academia</a>
-        <div class="navbar-collapse collapse navbar-responsive-collapse">
-          <ul class="nav navbar-nav">
-            <li><%= link_to "Usuarios", "/usuarios"  %></li>
-            <li><%= link_to "Mensalidades", "/mensalidades"  %></li>
-            <li><%= link_to "Exercicios", "/ficha_muscs"  %></li>
-          </ul>
-        </div>
-      </div>
-    </div>
->>>>>>> 4bb64477f2b240acb47e6e04fe679cdce69d89e1
 
     <div class="container">
       <div class="row">
@@ -135,7 +99,16 @@
           <%= bootstrap_flash %>
           <%= yield %>
         </div>
-        
+        <div class="col-lg-3">
+          <!-- <div class="well sidebar-nav">
+            <h3>Sidebar</h3>
+            <ul class="nav nav-list">
+              <li class="nav-header">Sidebar</li>
+              <li><%= link_to "Link1", "/path1"  %></li>
+              <li><%= link_to "Link2", "/path2"  %></li>
+              <li><%= link_to "Link3", "/path3"  %></li>
+            </ul>
+          </div><!--/.well --> -->
         </div><!--/span-->
       </div><!--/row-->
 

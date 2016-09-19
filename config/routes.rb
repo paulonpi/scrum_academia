@@ -1,16 +1,16 @@
 Rails.application.routes.draw do
-<<<<<<< HEAD
+
   get 'home/index'
   root 'home#index'
 
-=======
+
   resources :exercicios_ficha_muscs
   get 'exercicio_ficha_musc/new'
 
   get 'exercicio_ficha_musc/create'
 
   resources :ficha_exers
->>>>>>> ficha_de_musc
+
   resources :exercicios
   resources :ficha_muscs
   resources :ficha_aval_fisicas
