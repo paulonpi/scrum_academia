@@ -1,0 +1,13 @@
+<h1>Bem vindo <%=   %> </h1>
+<% professor = "" %>
+<% admin = "" %>
+<div id="professor" class="<%= professor %>">
+  <ul>
+    <li ><%= link_to 'Ver fichas de Alunos', usuarios_path %></td> </li>
+  </ul>
+</div>
+<div id="admin" class="<%= admin %>">
+  <ul>
+    <li visible="false"><%= link_to 'Ver Mensalidades', mensalidades_path %></td> </li>
+  </ul>
+</div>

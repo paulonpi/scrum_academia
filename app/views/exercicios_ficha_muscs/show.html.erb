@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Ficha musc:</strong>
+  <%= @exercicios_ficha_musc.ficha_musc_id %>
+</p>
+
+<p>
+  <strong>Exercicio:</strong>
+  <%= @exercicios_ficha_musc.exercicio_id %>
+</p>
+
+<%= link_to 'Edit', edit_exercicios_ficha_musc_path(@exercicios_ficha_musc) %> |
+<%= link_to 'Back', exercicios_ficha_muscs_path %>
