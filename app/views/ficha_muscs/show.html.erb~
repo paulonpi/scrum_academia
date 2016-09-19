@@ -24,7 +24,9 @@
 
 <p>
   <strong>exercicios:</strong>
-  <%= render 'exercicios'%>
+  <% @ficha_musc.exercicios.each do |exercicio|%>
+	<%= exercicio.nome %>
+  <% end %>
 </p>
 
 

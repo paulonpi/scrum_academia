@@ -2,7 +2,7 @@
 
 <p>
   <strong>Nome: </strong>
-  <%= @ficha_aval_fisica.usuario.nome %>  
+  <%= @usuario.nome %>  
 </p>
 
 <p>

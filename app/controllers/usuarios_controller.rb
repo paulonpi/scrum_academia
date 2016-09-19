@@ -32,6 +32,8 @@ class UsuariosController < ApplicationController
         format.html { redirect_to @usuario, notice: 'Usuario foi criado.' }
         format.json { render :show, status: :created, location: @usuario }
 	Mensalidade.create({usuario_id: @usuario.id})
+	FichaMusc.create({usuario_id: @usuario.id})
+	FichaAvalFisica.create({usuario_id: @usuario.id})
       else
         format.html { render :new }
         format.json { render json: @usuario.errors, status: :unprocessable_entity }

@@ -1,0 +1,1 @@
+json.array! @exercicios_ficha_muscs, partial: 'exercicios_ficha_muscs/exercicios_ficha_musc', as: :exercicios_ficha_musc

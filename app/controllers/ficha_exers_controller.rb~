@@ -1,0 +1,74 @@
+class FichaExersController < ApplicationController
+  before_action :set_ficha_exer, only: [:show, :edit, :update, :destroy]
+
+  # GET /ficha_exers
+  # GET /ficha_exers.json
+  def index
+    @ficha_exers = FichaExer.all
+  end
+
+  # GET /ficha_exers/1
+  # GET /ficha_exers/1.json
+  def show
+  end
+
+  # GET /ficha_exers/new
+  def new
+    @ficha_exer = FichaExer.new
+  end
+
+  # GET /ficha_exers/1/edit
+  def edit
+  end
+
+  # POST /ficha_exers
+  # POST /ficha_exers.json
+  def create
+    @ficha_exer = ficha_musc.ficha_exers.find_or_create_by(usuario_id: usuario.id)
+
+    respond_to do |format|
+      if @ficha_exer.save
+        format.html { redirect_to @ficha_exer, notice: 'Ficha exer was successfully created.' }
+        format.json { render :show, status: :created, location: @ficha_exer }
+      else
+        format.html { render :new }
+        format.json { render json: @ficha_exer.errors, status: :unprocessable_entity }
+      end
+    end
+  end
+
+  # PATCH/PUT /ficha_exers/1
+  # PATCH/PUT /ficha_exers/1.json
+  def update
+    respond_to do |format|
+      if @ficha_exer.update(ficha_exer_params)
+        format.html { redirect_to @ficha_exer, notice: 'Ficha exer was successfully updated.' }
+        format.json { render :show, status: :ok, location: @ficha_exer }
+      else
+        format.html { render :edit }
+        format.json { render json: @ficha_exer.errors, status: :unprocessable_entity }
+      end
+    end
+  end
+
+  # DELETE /ficha_exers/1
+  # DELETE /ficha_exers/1.json
+  def destroy
+    @ficha_exer.destroy
+    respond_to do |format|
+      format.html { redirect_to ficha_exers_url, notice: 'Ficha exer was successfully destroyed.' }
+      format.json { head :no_content }
+    end
+  end
+
+  private
+    # Use callbacks to share common setup or constraints between actions.
+    def set_ficha_exer
+      @ficha_exer = FichaExer.find(params[:id])
+    end
+
+    # Never trust parameters from the scary internet, only allow the white list through.
+    def ficha_exer_params
+      params.require(:ficha_exer).permit(:ficha_musc_id, :exercicio_id)
+    end
+end

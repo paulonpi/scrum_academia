@@ -1,0 +1,1 @@
+json.partial! "exercicios_ficha_muscs/exercicios_ficha_musc", exercicios_ficha_musc: @exercicios_ficha_musc

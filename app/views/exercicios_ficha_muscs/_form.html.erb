@@ -1,0 +1,25 @@
+<%= form_for(@exercicios_ficha_musc) do |f| %>
+  <% if @exercicios_ficha_musc.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@exercicios_ficha_musc.errors.count, "error") %> prohibited this exercicios_ficha_musc from being saved:</h2>
+
+      <ul>
+      <% @exercicios_ficha_musc.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :ficha_musc_id %><br>
+    <%= f.number_field :ficha_musc_id %>
+  </div>
+  <div class="field">
+    <%= f.label :exercicio_id %><br>
+    <%= f.number_field :exercicio_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
